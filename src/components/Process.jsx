@@ -15,15 +15,15 @@ function Process() {
       >
         Phoenix Book Process
       </RoundedContainer>
-      <h2 className="text-text-black text-[3rem] text-center font-cabin font-bold leading-[1.2]">
+      <h2 className="text-text-black text-[26px] lg:text-[3rem] text-center font-cabin font-bold leading-[1.2]">
         Become a Best-Seller
         <br />
         Author in <span className="text-accent-primary">4 Simple Steps!</span>
       </h2>
       {/* Banner */}
-      <div className="flex mx-[6.23%] items-center justify-center">
+      <div className="flex mx-[6.23%] items-center justify-center flex-col lg:flex-row">
         {/* Image */}
-        <div className="w-[40%]">
+        <div className="w-full lg:w-[40%]">
           <Image
             src={"/process/banner.png"}
             width={400}
@@ -32,7 +32,7 @@ function Process() {
           />
         </div>
         {/* Steps */}
-        <div className="w-[60%] grid grid-cols-2 my-[10%] gap-y-10 gap-x-10 items-center">
+        <div className="w-full lg:w-[60%] grid grid-cols-1 lg:grid-cols-2 my-[10%] gap-y-10 gap-x-10 items-center ">
           {[
             {
               title: "Order Placement",
@@ -61,13 +61,15 @@ function Process() {
           ].map((step, index) => (
             <div key={index}>
               {/* Image */}
-              <Image
-                src={`/process/${addDashes(step.image)}.png`}
-                className="mb-5"
-                width={60}
-                height={60}
-                alt={step.image}
-              />
+              <div className="w-full flex items-center justify-center lg:justify-start">
+                <Image
+                  src={`/process/${addDashes(step.image)}.png`}
+                  className="mb-5"
+                  width={60}
+                  height={60}
+                  alt={step.image}
+                />
+              </div>
               {/* Content */}
               <div>
                 <div className="text-[1.3rem] font-semibold mb-[0.68%]">

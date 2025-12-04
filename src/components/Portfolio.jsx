@@ -3,7 +3,7 @@ import RoundedContainer from "./RoundedContainer";
 import BookSlider from "./BooksSlider";
 function Portfolio() {
   return (
-    <section className="flex flex-col  justify-center bg-[url('/backgrounds/portfolio.png')] pt-28 pb-20  bg-contain  w-screen">
+    <section className="flex flex-col  justify-center bg-[url('/backgrounds/portfolio.png')] pt-28 pb-20  lg:bg-contain  w-screen bg-no-repeat lg:bg-repeat bg-cover">
       <div className="w-full flex justify-center">
         <RoundedContainer
           capitalize={false}

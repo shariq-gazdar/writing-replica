@@ -69,7 +69,7 @@ function page() {
         </div>
         {/* Right */}
         <div className=" w-[48.3%] flex flex-col gap-y-[5%]">
-          <h2 className="font-cabin font-bold text-[3rem] leading-[1.2] text-[#0B2240]">
+          <h2 className="font-cabin font-bold text-[26px] lg:text-[3rem] leading-[1.2] text-[#0B2240]">
             Crafting Excellence Through Expertise and Passion
           </h2>
           <p className="text-[#010c2f] text-[1rem] font-normal font-poppins">
@@ -100,7 +100,7 @@ function page() {
       </section>
       {/* The Best */}
       <section className="flex flex-col py-[80px] items-center px-[5%] text-center">
-        <h2 className="font-cabin text-[3rem] text-text-black font-bold">
+        <h2 className="font-cabin text-[26px] lg:text-[3rem] text-text-black font-bold">
           Why Phoenix Ghostwriting is A Progressive Agency?
         </h2>
         <p className="w-[80%]  text-[#010c2f] my-10 text-[18px] font-normal font-poppins">

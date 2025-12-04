@@ -50,7 +50,7 @@ function Controls({ swiper }) {
   }
 
   return (
-    <div className="mt-8 p-6 bg-transparent rounded-xl  w-fit">
+    <div className="mt-1 lg:mt-8 p-6 bg-transparent rounded-xl  w-fit">
       {/* Prev/Next Buttons */}
       <div className="flex items-start gap-4">
         <button

@@ -9,7 +9,7 @@ function Testimonial() {
   const [controlledSwiper, setControlledSwiper] = useState(null);
 
   return (
-    <div className="relative z-20 flex py-[0.6%]  px-[3%] bg-brown-background">
+    <div className="relative z-20 flex flex-col-reverse lg:flex-row px-0 py-[0.6%]  lg:px-[3%] bg-brown-background">
       <Image
         src={"/testimonials/before.png"}
         width={300}
@@ -25,14 +25,17 @@ function Testimonial() {
         alt="leaf"
       />
       {/* Left Side */}
-      <div className="w-[75%]">
+      <div className="lg:w-[75%] w-full">
         <Slider
           controlledSwiper={controlledSwiper}
           setControlledSwiper={setControlledSwiper}
         />
+        <span className="flex w-full justify-center items-center lg:hidden">
+          <Controls swiper={controlledSwiper} />
+        </span>
       </div>
       {/* Right Side */}
-      <div className="w-[25%] py-20 px-4 flex flex-col items-start">
+      <div className="lg:w-[25%] w-full py-20 px-4 flex flex-col lg;items-start items-center text-center lg:text-start">
         <RoundedContainer
           borderColor="red"
           className={"font-bold font-cabin overflow-clip py-[10px] px-[40px]"}
@@ -41,10 +44,12 @@ function Testimonial() {
         >
           Feedback About Phoenix
         </RoundedContainer>
-        <h3 className="text-text-black text-[1.9rem] leading-[1.2] font-cabin font-bold mt-[25%]">
+        <h3 className="text-text-black text-[1.9rem] leading-[1.2] font-cabin font-bold lg:mt-[25%] mt-2">
           1000+ Positive Reviews Reflecting Customer Satisfaction
         </h3>
-        <Controls swiper={controlledSwiper} />
+        <span className="hidden lg:block">
+          <Controls swiper={controlledSwiper} />
+        </span>
       </div>
     </div>
   );

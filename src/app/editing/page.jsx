@@ -10,6 +10,7 @@ import Cta from "@/components/Cta";
 import Process from "@/components/Process";
 import Benefits from "@/components/Benefits";
 import { NonShadowButton } from "@/components/ShadowButton";
+import Condedit from "@/components/Condedit";
 function page() {
   return (
     <div className="overflow-x-hidden">
@@ -70,7 +71,7 @@ function page() {
         </div>
         {/* Right */}
         <div className=" w-[48.3%] flex flex-col gap-y-[5%]  justify-center">
-          <h2 className="font-cabin font-bold text-[3rem] leading-[1.2] text-[#0B2240]">
+          <h2 className="font-cabin font-bold text-[26px] lg:text-[3rem] leading-[1.2] text-[#0B2240]">
             Fiction vs. Nonfiction! Discover What We Offer In the Subsequent
             Genres?
           </h2>
@@ -108,7 +109,7 @@ function page() {
             <div className="md:col-span-4">
               <div className="info-bri">
                 <div className="heading mb-6">
-                  <h2 className="text-3xl md:text-[3rem] font-bold text-white leading-tight">
+                  <h2 className="text-3xl md:text-[26px] lg:text-[3rem] font-bold text-white leading-tight">
                     Write, Edit, &amp; Publish With Phoenix Ghostwriting
                   </h2>
                 </div>
@@ -166,6 +167,9 @@ function page() {
           </div>
         </div>
       </section>
+      {/* Condedit */}
+      <Condedit />
+
       {/* Cta */}
       <Cta />
       {/* Process */}

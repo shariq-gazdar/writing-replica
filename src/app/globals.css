@@ -178,7 +178,7 @@
 }
 /* Add to your global.css or CSS module */
 .heading-1 {
-  @apply text-[3rem] font-bold leading-[1.2] text-text-black font-cabin;
+  @apply text-[26px] lg:text-[3rem] font-bold leading-[1.2] text-text-black font-cabin;
 }
 
 .heading-2 {

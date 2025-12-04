@@ -1,12 +1,13 @@
+import Image from "next/image";
 import React from "react";
 
 function Benefits() {
   return (
-    <section className="bg-[url('/backgrounds/benefits.png')] py-20 bg-brown-background bg-cover">
+    <section className="lg:bg-[url('/backgrounds/benefits.png')] py-20 lg:bg-brown-background bg-cover bg-left bg-[#10223f]">
       {/* Content */}
-      <div className="w-1/2 flex flex-col mx-[6.23%] px-4 space-y-5">
+      <div className="lg:w-1/2 w-full flex flex-col lg:mx-[6.23%] px-4 space-y-5">
         {/* Heading */}
-        <h2 className="text-white text-[3rem] font-bold leading-[1.2]">
+        <h2 className="text-white text-[26px] lg:text-[3rem] font-bold leading-[1.2]">
           How <span className="text-accent-primary">Phoenix Ghostwriting</span>{" "}
           <br />
           Adds Value For Authors?
@@ -18,7 +19,7 @@ function Benefits() {
           identifies the gaps and delivers relevant solutions.
         </p>
         {/* Benefits Points */}
-        <ul className="grid grid-cols-2 ml-[5%] ">
+        <ul className="grid grid-cols-2 items-center justify-center ">
           {[
             "Qualified Writers Panel",
             "Timely Updates",
@@ -29,8 +30,14 @@ function Benefits() {
           ].map((benefit, index) => (
             <li
               key={index}
-              className="list-image-[url('/finishes/list-icon.png')] text-white text-[1.2rem] font-poppins font-medium mb-[17px]"
+              className="l text-white text-[1.2rem] font-poppins font-medium mb-[17px] flex items-center gap-2"
             >
+              <Image
+                src={"/finishes/list-icon.png"}
+                width={20}
+                height={20}
+                alt="list-icon"
+              />
               {benefit}
             </li>
           ))}

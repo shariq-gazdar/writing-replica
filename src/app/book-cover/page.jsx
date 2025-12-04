@@ -92,7 +92,7 @@ function page() {
         </div>
         {/* Right */}
         <div className=" w-[48.3%] flex flex-col gap-y-[5%]  justify-center">
-          <h2 className="font-cabin font-bold text-[3rem] leading-[1.2] text-[#0B2240]">
+          <h2 className="font-cabin font-bold text-[26px] lg:text-[3rem] leading-[1.2] text-[#0B2240]">
             Fiction vs. Nonfiction! Discover What We Offer In the Subsequent
             Genres?
           </h2>
@@ -187,7 +187,7 @@ function page() {
             <div className="w-full lg:w-6/12">
               <div className="info-ill">
                 <div className="heading mb-8">
-                  <h2 className="text-[3rem] font-bold text-[#0b2240] leading-[1.2]">
+                  <h2 className="text-[26px] lg:text-[3rem] font-bold text-[#0b2240] leading-[1.2]">
                     Correlation Between Book Covers &amp; Digital Sales
                   </h2>
                 </div>

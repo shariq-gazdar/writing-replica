@@ -23,7 +23,7 @@ export default function Home() {
         {/* Navbar */}
         <Navbar />
         {/* Hero Section */}
-        <section className="flex items-start justify-between px-[62.33px] py-12 w-screen flex-col lg:flex-row">
+        <section className="flex items-start justify-between lg:px-[62.33px] lg:py-12 px-0 py-10 w-screen flex-col lg:flex-row text-center lg:text-start">
           <HeroSectionWrapper
             leftClassName="gap-y-5"
             rightClassName="justify-end"
@@ -52,21 +52,23 @@ export default function Home() {
                 </p>
 
                 {/* Shadow button */}
-                <NonShadowButton
-                  paddingVertical={12}
-                  paddingHorizontal={30}
-                  backgroundColor="#f5441b"
-                  mainColor="#fff"
-                  hoverColor="#173f73"
-                  borderColor="#fff"
-                >
-                  request a quote
-                </NonShadowButton>
+                <div className="flex items-center justify-center lg:justify-start">
+                  <NonShadowButton
+                    paddingVertical={12}
+                    paddingHorizontal={30}
+                    backgroundColor="#f5441b"
+                    mainColor="#fff"
+                    hoverColor="#173f73"
+                    borderColor="#fff"
+                  >
+                    request a quote
+                  </NonShadowButton>
+                </div>
 
                 {/* Rating & peoples */}
-                <div className="flex items-center w-fit justify-start gap-4 mt-[20px]">
+                <div className="flex items-center lg:w-fit justify-center lg:justify-start gap-4 mt-[20px] flex-col lg:flex-row">
                   {/* Rating */}
-                  <h5 className="text-[3rem]">
+                  <h5 className="text-[26px] lg:text-[3rem]">
                     4.8
                     <sub className="relative -bottom-px left-px text-[1.5rem]">
                       out of 5
@@ -105,29 +107,30 @@ export default function Home() {
       <BrandLine />
 
       {/*  Initiate Section */}
-      <section className="bg-brown-background py-16 px-4">
-        <div className="max-w-6xl mx-auto">
+      <section className="bg-brown-background py-16 px-4 ">
+        <div className=" mx-[2%]">
           <div className="bg-[url('/backgrounds/masterpiece.png')] bg-cover bg-center rounded-2xl p-8  md:p-36">
             <div className="max-w-2xl ml-[40%]">
               {/* Heading */}
               <h2 className="text-3xl md:text-4xl font-cabin font-bold text-text-black mb-6 leading-tight">
-                Start Your Book Journey With Us - Any Genre Welcome!
+                Let Us Initiate Your Book Process - Any Genre You Choose!
               </h2>
 
               {/* Content */}
               <div className="space-y-4">
                 <p className="text-[15px] font-poppins text-[#50545A] leading-relaxed">
-                  Fiction, historical, sci-fi, non-fiction - no matter your
-                  genre, we bring your concept to life with a unique manuscript.
-                  We skip the clichés and focus on creating captivating plots
-                  that stand out.
+                  Whether your project is fiction, historical, sci-fi,
+                  non-fiction, or any other genre, our team produces the concept
+                  to create a distinctive manuscript. We avoid clichés, ensuring
+                  each book features engaging plots and subplots.
                 </p>
 
                 <p className="text-[15px] font-poppins text-[#50545A] leading-relaxed">
-                  Our process starts with deep research and careful outlining to
-                  understand your genre inside out. We craft stories that not
-                  only engage readers but create the buzz needed to grow your
-                  audience and boost book sales.
+                  Through initial research and outlining, we understand your
+                  genre in-depth to frame a story and plot that would engage
+                  your readers. The uniqueness added to your narrative is a
+                  NOISE that attracts new readers and ultimately grows your book
+                  sales.
                 </p>
               </div>
             </div>
@@ -154,7 +157,7 @@ export default function Home() {
             Lead The Literary Industry With the Right Strategy and Solutions
           </h2>
           {/* Cards */}
-          <div className="flex flex-wrap items-center justify-center">
+          <div className="three-col  justify-center">
             {[
               {
                 heading: "Book Publishing",
@@ -189,7 +192,7 @@ export default function Home() {
             ].map((service, index) => (
               <div
                 key={service.heading}
-                className="bg-white w-[29%] p-[30px] m-5 rounded-2xl"
+                className="bg-white w-[90%] p-[30px] m-5 rounded-2xl"
               >
                 {/* Image and text */}
                 <div className="flex items-end w-[60%] text-start space-x-2 mb-[5%]">
@@ -231,7 +234,7 @@ export default function Home() {
         </div>
       </div>
       {/* Stats */}
-      <div className="flex flex-wrap space-x-[10%] justify-center py-[80px] bg-brown-background border-b-2 border-accent-secondary">
+      <div className=" ">
         {[
           {
             stat: "1800+",
@@ -250,7 +253,7 @@ export default function Home() {
             text: "of Customers Return",
           },
         ].map((stat) => (
-          <div key={stat.text} className="flex flex-col items-center w-[10%]">
+          <div key={stat.text} className="flex flex-col items-center w-[10%] ">
             <h2 className="text-accent-primary text-[4rem] font-poppins">
               {stat.stat}
             </h2>
@@ -263,9 +266,9 @@ export default function Home() {
       {/* Our Finishes */}
       <div className="relative py-[5%] bg-brown-background px-[6%] overflow-y-hidden">
         {/* Content */}
-        <div className="flex flex-col w-[55%] space-y-[3%]  ">
+        <div className="flex flex-col w-full lg:w-[55%] space-y-[3%]  py-10 lg:py-0">
           {/* Heading */}
-          <h1 className="text-[3rem] font-bold leading-[1.2] text-text-black">
+          <h1 className="text-[26px] lg:text-[26px] lg:text-[3rem] font-bold leading-[1.2] text-text-black">
             Ghostwriting is a matter of trust - entrenching the branches to
             integrity and confidentiality
           </h1>
@@ -280,7 +283,7 @@ export default function Home() {
             influence the author's credibility.
           </p>
           {/* List */}
-          <ul className="grid grid-cols-2 list-image-[url('/finishes/list-icon.png')] ml-[5%] gap-y-[5%]  font-poppins font-medium text-text-black text-[1.2rem]">
+          <ul className="grid grid-cols-2  ml-[5%] gap-y-[5%]  font-poppins font-medium text-text-black text-[1.2rem] py-10 lg:py-0">
             {[
               "Increasing Competition",
               "Stress",
@@ -293,7 +296,15 @@ export default function Home() {
               "Lack of Motivation",
               "Perfectionism",
             ].map((item) => (
-              <li key={item}>{item}</li>
+              <li key={item} className="flex items-center">
+                <Image
+                  src={"/finishes/list-icon.png"}
+                  width={32}
+                  height={32}
+                  alt="list-icon"
+                />
+                {item}
+              </li>
             ))}
           </ul>
           {/* Quote Button */}
@@ -313,7 +324,17 @@ export default function Home() {
         </div>
 
         {/* Image */}
-        <div className="absolute right-0 -top-10 py-[10%] w-[40%]  pr-[3%] bg-white">
+        <div className="absolute right-0 -top-10 py-[10%] w-[40%]  pr-[3%] bg-white hidden lg:block">
+          <Image
+            src={"/finishes/banner-pic.png"}
+            width={500}
+            height={1000}
+            className="-left-[3%] relative"
+            alt="banner-pic"
+          />
+        </div>
+        {/* Mobile Image */}
+        <div className=" py-[10%] w-full pr-[3%] bg-white block lg:hidden">
           <Image
             src={"/finishes/banner-pic.png"}
             width={500}
