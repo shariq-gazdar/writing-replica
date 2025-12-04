@@ -12,10 +12,11 @@ function ShadowButton({
   paddingVertical,
   paddingHorizontal,
   borderColor = "#000",
+  className,
 }) {
   return (
     <button
-      className={`flex items-center rounded-lg text-[12px] border  hover:border transition-all delay-100 ease-in-out font-cabin gap-x-1 font-bold w-fit`}
+      className={`flex items-center rounded-lg text-[12px] border  hover:border transition-all delay-100 ease-in-out font-cabin gap-x-1 font-bold w-fit ${className}`}
       style={{
         paddingLeft: paddingHorizontal,
         paddingRight: paddingHorizontal,
@@ -56,6 +57,7 @@ function ShadowButton({
 
 export function NonShadowButton({
   children,
+  className,
   shadowColor = "#000",
   mainColor = "#000",
   hoverColor = "#212529",
@@ -66,7 +68,7 @@ export function NonShadowButton({
 }) {
   return (
     <button
-      className="flex items-center rounded-lg text-[12px] border transition-all duration-100 ease-in-out font-cabin gap-x-1 font-bold w-fit "
+      className={`flex items-center rounded-lg  border transition-all duration-200 ease-in-out font-cabin gap-x-1 font-bold w-fit ${className} `}
       style={{
         paddingLeft: paddingHorizontal,
         paddingRight: paddingHorizontal,

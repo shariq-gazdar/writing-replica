@@ -1,16 +1,21 @@
 "use client";
+import Benefits from "@/components/Benefits";
+import BookSlider from "@/components/BooksSlider";
 import BrandLine from "@/components/BrandLine";
+import Cta from "@/components/Cta";
+import Footer from "@/components/Footer";
+import HeroSectionWrapper from "@/components/HeroSectionWrapper";
 import Navbar from "@/components/Navbar";
+import Portfolio from "@/components/Portfolio";
+import Process from "@/components/Process";
 import RoundedContainer from "@/components/RoundedContainer";
 import ShadowButton, { NonShadowButton } from "@/components/ShadowButton";
-import { capitalizeAll } from "@/lib/helpers";
+import Testimonial from "@/components/Testimonials/Testimonial";
+import { addDashes, capitalizeAll } from "@/lib/helpers";
 import Image from "next/image";
 import { useEffect } from "react";
 
 export default function Home() {
-  useEffect(() => {
-    console.log(capitalizeAll("Shariq Gazdar"));
-  });
   return (
     <div className="max-w-screen overflow-x-hidden">
       {/* Hero Section & background */}
@@ -19,81 +24,93 @@ export default function Home() {
         <Navbar />
         {/* Hero Section */}
         <section className="flex items-start justify-between px-[62.33px] py-12 w-screen flex-col lg:flex-row">
-          {/* Left Side */}
-          <div className="w-full lg:w-1/2 flex flex-col gap-y-5 px-[15px]">
-            <RoundedContainer
-              className="font-cabin hidden lg:flex"
-              fontSize={13.6}
-            >
-              Leading Book Writing Agency
-            </RoundedContainer>
-            {/* Heading */}
-            <h1 className="lg:text-[40.8px] text-[#0B2240] font-bold font-cabin line leading-[43px] text-[28px]">
-              {
-                "Professional Ghostwriting \n Solutions Focused on Building \n Author Reputation"
-              }
-            </h1>
-            {/* Description */}
-            <p className="lg:text-[13.6px] font-poppins text-[#010C2F] text-[1.2rem] font-normal">
-              {
-                "   Phoenix Ghostwriting has a dedicated team committed to debunking the myth that writing a book alone generates sales. Instead, we focus on creating value through a comprehensive process that includes writing, editing, proofreading, publishing, and marketing to ensure the highest level of customer satisfaction."
-              }
-            </p>
-            {/* Shadow button */}
-            <NonShadowButton
-              paddingVertical={12}
-              paddingHorizontal={30}
-              backgroundColor="#f5441b"
-              mainColor="#fff"
-              hoverColor="#173f73"
-              borderColor="#fff"
-            >
-              request a quote
-            </NonShadowButton>
-            {/* Rating & peoples */}
-            <div className="flex items-center w-fit justify-start gap-4 mt-[20px]">
-              {/* Rating */}
-              <h5 className="text-[3rem]">
-                4.8
-                <sub className="relative -bottom-px left-px text-[1.5rem]">
-                  out of 5
-                </sub>
-              </h5>
-              {/* Peoples */}
-              <div className="flex-shrink-0">
+          <HeroSectionWrapper
+            leftClassName="gap-y-5"
+            rightClassName="justify-end"
+            left={
+              <>
+                {/* Left Side */}
+                <RoundedContainer
+                  className="font-cabin hidden lg:flex font-medium uppercase leading-[1.2] py-[10px] px-[25px]"
+                  fontSize={"1rem"}
+                >
+                  Leading Book Writing Agency
+                </RoundedContainer>
+
+                {/* Heading */}
+                <h1 className="lg:text-[40.8px] text-text-black font-bold font-cabin line leading-[43px] text-[28px]">
+                  {
+                    "Professional Ghostwriting \n Solutions Focused on Building \n Author Reputation"
+                  }
+                </h1>
+
+                {/* Description */}
+                <p className="lg:text-[13.6px] font-poppins text-[#010C2F] text-[1.2rem] font-normal">
+                  {
+                    "   Phoenix Ghostwriting has a dedicated team committed to debunking the myth that writing a book alone generates sales. Instead, we focus on creating value through a comprehensive process that includes writing, editing, proofreading, publishing, and marketing to ensure the highest level of customer satisfaction."
+                  }
+                </p>
+
+                {/* Shadow button */}
+                <NonShadowButton
+                  paddingVertical={12}
+                  paddingHorizontal={30}
+                  backgroundColor="#f5441b"
+                  mainColor="#fff"
+                  hoverColor="#173f73"
+                  borderColor="#fff"
+                >
+                  request a quote
+                </NonShadowButton>
+
+                {/* Rating & peoples */}
+                <div className="flex items-center w-fit justify-start gap-4 mt-[20px]">
+                  {/* Rating */}
+                  <h5 className="text-[3rem]">
+                    4.8
+                    <sub className="relative -bottom-px left-px text-[1.5rem]">
+                      out of 5
+                    </sub>
+                  </h5>
+                  {/* Peoples */}
+                  <div className="flex-shrink-0">
+                    <Image
+                      src={"/hero-section/hero-peoples.png"}
+                      width={220}
+                      height={50}
+                      className="object-cover"
+                      alt="review-people"
+                      sizes="220px"
+                    />
+                  </div>
+                </div>
+              </>
+            }
+            right={
+              <>
+                {/* Right Side */}
                 <Image
-                  src={"/hero-section/hero-peoples.png"}
-                  width={220}
-                  height={50}
-                  className="object-cover"
-                  alt="review-people"
-                  sizes="220px"
+                  src={"/hero-section/hero-image.png"}
+                  width={380}
+                  height={415}
+                  alt="hero-banner"
+                  sizes="380px"
                 />
-              </div>
-            </div>
-          </div>
-          {/* Right Side */}
-          <div className="w-full lg:w-1/2 flex justify-end px-[15px] mt-[5px]">
-            <Image
-              src={"/hero-section/hero-image.png"}
-              width={380}
-              height={415}
-              alt="hero-banner"
-              sizes="380px"
-            />
-          </div>
+              </>
+            }
+          />
         </section>
       </div>
       {/* Brand Line */}
       <BrandLine />
 
       {/*  Initiate Section */}
-      <section className="bg-[#f7f5f0] py-16 px-4">
+      <section className="bg-brown-background py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="bg-[url('/backgrounds/masterpiece.png')] bg-cover bg-center rounded-2xl p-8  md:p-36">
             <div className="max-w-2xl ml-[40%]">
               {/* Heading */}
-              <h2 className="text-3xl md:text-4xl font-cabin font-bold text-[#0B2240] mb-6 leading-tight">
+              <h2 className="text-3xl md:text-4xl font-cabin font-bold text-text-black mb-6 leading-tight">
                 Start Your Book Journey With Us - Any Genre Welcome!
               </h2>
 
@@ -119,15 +136,21 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <div className="bg-[url('/backgrounds/service.png')]">
+      <div className="bg-[url('/backgrounds/service.png')] bg-brown-background">
         {/* Container */}
-        <div className="flex flex-col items-center text-center py-[170px]">
+        <div className="flex flex-col items-center text-center pt-[170px] ">
           {/* Rounded Container */}
-          <RoundedContainer borderColor="red" textColor="white">
+          <RoundedContainer
+            borderColor="red"
+            textColor="white"
+            capitalize={false}
+            className={"font-cabin font-bold py-[10px] px-[40px]"}
+            fontSize={16.4}
+          >
             What Phoenix Offers
           </RoundedContainer>
           {/* Heading */}
-          <h2 className="text-[3rem] font-bold text-white font-cabin w-[90%]">
+          <h2 className="text-[40.8px] font-bold text-white font-cabin w-[80%] my-[2%]">
             Lead The Literary Industry With the Right Strategy and Solutions
           </h2>
           {/* Cards */}
@@ -170,7 +193,7 @@ export default function Home() {
               >
                 {/* Image and text */}
                 <div className="flex items-end w-[60%] text-start space-x-2 mb-[5%]">
-                  <div className="flex-shrink-0">
+                  <div className="shrink-0">
                     <Image
                       src={`/services/${index + 1}.png`}
                       width={50}
@@ -179,7 +202,7 @@ export default function Home() {
                       className="object-contain"
                     />
                   </div>
-                  <h4 className="text-[#0B2240] text-[1.5rem] lg:text-[20px] leading-tight">
+                  <h4 className="text-text-black text-[1.5rem] lg:text-[20px] leading-tight">
                     {service.heading}
                   </h4>
                 </div>
@@ -198,13 +221,120 @@ export default function Home() {
               backgroundColor="#f5441b"
               mainColor="#fff"
               hoverColor="#173f73"
-              borderColor="#fff"
+              borderColor="#142f53"
+              shadowColor="#1a3b66"
+              className={"text-[1rem]"}
             >
               Request a quote
             </NonShadowButton>
           </div>
         </div>
       </div>
+      {/* Stats */}
+      <div className="flex flex-wrap space-x-[10%] justify-center py-[80px] bg-brown-background border-b-2 border-accent-secondary">
+        {[
+          {
+            stat: "1800+",
+            text: "Books Written",
+          },
+          {
+            stat: "200+",
+            text: "Writers & Editors",
+          },
+          {
+            stat: "98%",
+            text: "Customer Satisfaction",
+          },
+          {
+            stat: "90%",
+            text: "of Customers Return",
+          },
+        ].map((stat) => (
+          <div key={stat.text} className="flex flex-col items-center w-[10%]">
+            <h2 className="text-accent-primary text-[4rem] font-poppins">
+              {stat.stat}
+            </h2>
+            <p className=" text-accent-secondary text-base font-poppins">
+              {stat.text}
+            </p>
+          </div>
+        ))}
+      </div>
+      {/* Our Finishes */}
+      <div className="relative py-[5%] bg-brown-background px-[6%] overflow-y-hidden">
+        {/* Content */}
+        <div className="flex flex-col w-[55%] space-y-[3%]  ">
+          {/* Heading */}
+          <h1 className="text-[3rem] font-bold leading-[1.2] text-text-black">
+            Ghostwriting is a matter of trust - entrenching the branches to
+            integrity and confidentiality
+          </h1>
+          {/* Description */}
+          <p className="font-poppins text-[#50545a] font-normal text-[1.2rem]">
+            Choosing a ghostwriting agency is a decision that should not be
+            taken hastily, as it fundamentally involves trust. Therefore, it’s
+            essential to work with professionals who are not only skilled but
+            also highly respectful of confidentiality. Our agency is dedicated
+            to delivering exceptional and unique narratives that align with your
+            requirements and vision, while considering the many factors that
+            influence the author's credibility.
+          </p>
+          {/* List */}
+          <ul className="grid grid-cols-2 list-image-[url('/finishes/list-icon.png')] ml-[5%] gap-y-[5%]  font-poppins font-medium text-text-black text-[1.2rem]">
+            {[
+              "Increasing Competition",
+              "Stress",
+              "Busy Schedules",
+              "Writer's Block",
+              "Financial Constraints",
+              "Rejected Manuscript",
+              "Lack of Productivity",
+              "Creative Block",
+              "Lack of Motivation",
+              "Perfectionism",
+            ].map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+          {/* Quote Button */}
+          <div className="mt-[10%]">
+            <NonShadowButton
+              paddingVertical={12}
+              paddingHorizontal={30}
+              backgroundColor="#f5441b"
+              mainColor="#fff"
+              hoverColor="#173f73"
+              borderColor="#fff"
+              className={"text-[1rem]"}
+            >
+              request a quote
+            </NonShadowButton>
+          </div>
+        </div>
+
+        {/* Image */}
+        <div className="absolute right-0 -top-10 py-[10%] w-[40%]  pr-[3%] bg-white">
+          <Image
+            src={"/finishes/banner-pic.png"}
+            width={500}
+            height={1000}
+            className="-left-[3%] relative"
+            alt="banner-pic"
+          />
+        </div>
+      </div>
+      {/* Call To Action */}
+      <Cta />
+      {/* Portfolio */}
+      <Portfolio />
+      {/* Process */}
+      <Process />
+      {/* Benefits */}
+      <Benefits />
+      {/* Testimonials */}
+      <Testimonial />
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
