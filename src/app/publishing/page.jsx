@@ -16,10 +16,9 @@ function page() {
         {/* Navbar */}
         <Navbar />
         {/* Hero Section */}
-        <section className="flex items-start justify-between px-[62.33px] py-12 w-screen flex-col lg:flex-row">
+        <section className="flex items-start justify-between lg:px-[62.33px] px-0 py-12 w-screen flex-col lg:flex-row">
           <HeroSectionWrapper
             leftClassName="gap-y-5"
-            rightClassName="justify-end"
             left={
               <>
                 {/* Left Side */}
@@ -66,19 +65,19 @@ function page() {
           </RoundedContainer>
           {/* Heading Section */}
           <div className="text-center mb-12 md:mb-20">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0b2240] mb-6 md:mb-8 leading-tight">
+            <h2 className="text-[26px] lg:text-[3rem] font-bold text-[#0b2240] mb-6 md:mb-8 leading-tight my-10 lg:my-0">
               Phoenix Offers Industry-Leading Publishing Alternatives With
               Contemporary Services
             </h2>
-            <p className="text-base md:text-lg text-[#50545a] max-w-4xl mx-auto leading-relaxed">
+            <p className="text-[1.2rem] md:text-lg text-[#010c2f] max-w-4xl mx-auto leading-relaxed font-poppins px-[4%]">
               Have you ever thought about how book publishing evolved from
               printing books to digital publishers, and eventually to global
               agencies? Each publishing avenue requires compliance with the
               standard industry regulations, which makes it challenging for
               authors to reach their audience. As a book publishing agency,
               Phoenix Ghostwriting assists the clients in reaching their
-              audience through platforms such as Amazon, Barnes &amp; Noble,
-              Blurb, Kobo, and others.
+              audience through platforms such as Amazon, Barnes & Noble, Blurb,
+              Kobo, and others.
             </p>
           </div>
 
@@ -87,7 +86,7 @@ function page() {
             <img
               src="https://www.phoenixghostwriting.com/assets/images/share-story.png"
               alt="Share Story Illustration"
-              className="w-full max-w-4xl h-auto block mx-auto"
+              className="w-full max-w-4xl h-auto lg:block mx-auto hidden "
             />
           </div>
 
@@ -95,14 +94,14 @@ function page() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-start">
             {/* Left Column - Heading (4/12 on desktop) */}
             <div className="lg:col-span-4">
-              <h4 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0b2240] leading-tight">
+              <h4 className="text-[2.5rem] text-center lg:text-start lg:text-[3rem] font-bold text-[#0b2240] leading-tight">
                 What You Obtain When Publishing Your Book With Us?
               </h4>
             </div>
 
             {/* Right Column - List Items (8/12 on desktop) */}
             <div className="lg:col-span-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 px-5">
                 {[
                   {
                     text: "ISBN Acquisition",
@@ -131,14 +130,14 @@ function page() {
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className="bg-white border border-gray-300 px-5 py-4 flex items-start gap-4 rounded-md hover:shadow-lg transition-all duration-300 min-h-[70px]"
+                    className="bg-white border border-gray-300 px-5 py-3 flex lg:items-start items-center  rounded-md hover:shadow-lg transition-all duration-300 "
                   >
                     <img
                       src="https://www.phoenixghostwriting.com/assets/images/list-icon.png"
                       alt="Check icon"
-                      className="w-5 h-5 mt-1 flex-shrink-0"
+                      className="w-10 h-10 mt-1 flex-shrink-0"
                     />
-                    <span className="text-[#0b2240] font-medium text-sm md:text-base leading-snug">
+                    <span className="text-[#0b2240] font-medium text-[1.5rem] leading-snug ml-[5%]">
                       {item.text}
                     </span>
                   </div>
@@ -149,7 +148,7 @@ function page() {
         </div>
       </section>
       {/* Journey */}
-      <section className="market-offer journey bg-white py-16 md:py-20">
+      <section className="market-offer journey bg-brown-background py-16 md:py-20">
         <div className="container mx-auto px-4 max-w-7xl">
           {/* Top Section */}
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 mb-16 lg:mb-24">
@@ -165,32 +164,32 @@ function page() {
             {/* Content Column */}
             <div className="w-full lg:w-7/12">
               <div className="heading mb-8">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0b2240] leading-tight mb-6">
+                <h2 className="text-[26px] lg:text-[3rem] text-center lg:text-start font-bold text-[#0b2240] leading-tight mb-6">
                   How to Reach Your Next Big Milestone as an Author?
                 </h2>
               </div>
               <div className="space-y-6">
-                <p className="text-lg text-[#50545a] leading-relaxed">
+                <p className="text-[1.2rem] font-poppins text-center lg:text-start text-[#50545a] leading-relaxed">
                   Book publishing, combined with the right marketing strategy,
                   helps you achieve your next big milestone as an author.
                   However, there's no such thing as a free lunch; with every
                   investment comes associated risks. Our consultants guide you
                   in choosing the right publishing strategy and platform.
-                </p>
-                <p className="text-lg text-[#50545a] leading-relaxed">
+                  <br />
+                  <br />
                   Through our extensive research, we gain insights into real
                   data on the types of books preferred by readers and in which
                   regions. Increase your book sales by integrating the
                   following:
                 </p>
-                <ul className="list-disc pl-6 mt-4 space-y-3">
-                  <li className="text-lg text-[#0b2240] font-medium">
+                <ul className="list-disc pl-6 mt-4 space-y-3 ">
+                  <li className="text-lg text-[#0b2240] font-medium px-[40%]">
                     Keyword Search
                   </li>
-                  <li className="text-lg text-[#0b2240] font-medium">
+                  <li className="text-lg text-[#0b2240] font-medium px-[40%]">
                     Competitor Analysis
                   </li>
-                  <li className="text-lg text-[#0b2240] font-medium">
+                  <li className="text-lg text-[#0b2240] font-medium px-[40%]">
                     Category Search
                   </li>
                 </ul>
@@ -251,7 +250,7 @@ function page() {
                     box.borderBottom ? "border-b-2" : ""
                   } border-[#b5b5b6]`}
                 >
-                  <h4 className="text-2xl md:text-3xl font-semibold text-[#f5441b] mb-6">
+                  <h4 className="text-2xl md:text-3xl font-semibold text-accent-primary mb-6">
                     {box.title}
                   </h4>
                   <p className="text-lg text-[#50545a] leading-relaxed">

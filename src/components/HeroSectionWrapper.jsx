@@ -20,14 +20,14 @@ export default function HeroSectionWrapper({
     >
       {/* Left Side */}
       <div
-        className={`w-full lg:w-1/2 flex flex-col gap-y-5 px-[15px] ${leftClassName}`}
+        className={`w-full lg:w-1/2 flex flex-col gap-y-5 px-[15px] text-center lg:text-start ${leftClassName}`}
       >
         {left}
       </div>
 
       {/* Right Side */}
       <div
-        className={`w-full lg:w-1/2 flex justify-end px-[15px] mt-[5px] ${rightClassName}`}
+        className={`w-full lg:w-1/2 flex justify-center px-0 lg:px-[15px] mt-[5px] ${rightClassName} items-center py-10 lg:py-0`}
       >
         {right}
       </div>

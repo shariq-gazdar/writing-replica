@@ -81,7 +81,7 @@ function Slider({ controlledSwiper, setControlledSwiper }) {
                 />
                 <Image
                   src={`/testimonials/${index + 1}.png`}
-                  alt={slide.title}
+                  alt={index}
                   width={100}
                   height={100}
                   className="rounded-full"

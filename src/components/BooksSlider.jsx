@@ -73,7 +73,7 @@ function BookSlider() {
         ))}
       </Swiper>
 
-      {/* Custom Navigation Buttons */}
+      {/* Custom Navigation Buttons
       <div
         className="custom-prev absolute left-4 top-1/2 -translate-y-1/2 z-10
         w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center
@@ -112,7 +112,7 @@ function BookSlider() {
             d="M9 5l7 7-7 7"
           />
         </svg>
-      </div>
+      </div> */}
     </div>
   );
 }

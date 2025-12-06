@@ -23,10 +23,9 @@ export default function Home() {
         {/* Navbar */}
         <Navbar />
         {/* Hero Section */}
-        <section className="flex items-start justify-between lg:px-[62.33px] lg:py-12 px-0 py-10 w-screen flex-col lg:flex-row text-center lg:text-start">
+        <section className="flex items-center lg:items-start justify-between lg:lg:px-[62.33px] px-0 lg:py-12 px-0 py-10 w-screen flex-col lg:flex-row text-center lg:text-start">
           <HeroSectionWrapper
             leftClassName="gap-y-5"
-            rightClassName="justify-end"
             left={
               <>
                 {/* Left Side */}
@@ -38,7 +37,7 @@ export default function Home() {
                 </RoundedContainer>
 
                 {/* Heading */}
-                <h1 className="lg:text-[40.8px] text-text-black font-bold font-cabin line leading-[43px] text-[28px]">
+                <h1 className="lg:text-[3rem] text-[28px] text-text-black font-bold font-cabin line leading-[1.2]">
                   {
                     "Professional Ghostwriting \n Solutions Focused on Building \n Author Reputation"
                   }
@@ -75,7 +74,7 @@ export default function Home() {
                     </sub>
                   </h5>
                   {/* Peoples */}
-                  <div className="flex-shrink-0">
+                  <div className="shrink-0">
                     <Image
                       src={"/hero-section/hero-peoples.png"}
                       width={220}
@@ -109,23 +108,22 @@ export default function Home() {
       {/*  Initiate Section */}
       <section className="bg-brown-background py-16 px-4 ">
         <div className=" mx-[2%]">
-          <div className="bg-[url('/backgrounds/masterpiece.png')] bg-cover bg-center rounded-2xl p-8  md:p-36">
-            <div className="max-w-2xl ml-[40%]">
+          <div className="bg-brown-background lg:bg-[url('/backgrounds/masterpiece.png')] bg-cover bg-bottom rounded-2xl lg:p-8  md:p-36 lg:h-[500px]">
+            <div className=" lg:ml-[40%]">
               {/* Heading */}
-              <h2 className="text-3xl md:text-4xl font-cabin font-bold text-text-black mb-6 leading-tight">
+              <h2 className="text-[26px] lg:text-[3rem] font-cabin font-bold text-text-black mb-6 leading-tight text-center lg:text-start">
                 Let Us Initiate Your Book Process - Any Genre You Choose!
               </h2>
 
               {/* Content */}
               <div className="space-y-4">
-                <p className="text-[15px] font-poppins text-[#50545A] leading-relaxed">
+                <p className="text-[1.2rem] font-poppins text-[#50545A] leading-[1.2] text-center lg:text-start">
                   Whether your project is fiction, historical, sci-fi,
                   non-fiction, or any other genre, our team produces the concept
                   to create a distinctive manuscript. We avoid clichés, ensuring
                   each book features engaging plots and subplots.
-                </p>
-
-                <p className="text-[15px] font-poppins text-[#50545A] leading-relaxed">
+                  <br />
+                  <br />
                   Through initial research and outlining, we understand your
                   genre in-depth to frame a story and plot that would engage
                   your readers. The uniqueness added to your narrative is a
@@ -139,9 +137,9 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <div className="bg-[url('/backgrounds/service.png')] bg-brown-background">
+      <div className="lg:bg-[url('/backgrounds/service.png')] lg:bg-brown-background bg-[#28263b]">
         {/* Container */}
-        <div className="flex flex-col items-center text-center pt-[170px] ">
+        <div className="flex flex-col items-center text-center pt-10 lg:pt-[170px] justify-center lg:justify-center">
           {/* Rounded Container */}
           <RoundedContainer
             borderColor="red"
@@ -153,11 +151,11 @@ export default function Home() {
             What Phoenix Offers
           </RoundedContainer>
           {/* Heading */}
-          <h2 className="text-[40.8px] font-bold text-white font-cabin w-[80%] my-[2%]">
+          <h2 className="text-[26px] lg:text-[3rem] font-bold text-white font-cabin w-full lg:w-[80%] my-[2%] leading-[1.2]">
             Lead The Literary Industry With the Right Strategy and Solutions
           </h2>
           {/* Cards */}
-          <div className="three-col  justify-center">
+          <div className="three-col items-center justify-center container">
             {[
               {
                 heading: "Book Publishing",
@@ -192,10 +190,10 @@ export default function Home() {
             ].map((service, index) => (
               <div
                 key={service.heading}
-                className="bg-white w-[90%] p-[30px] m-5 rounded-2xl"
+                className="bg-white lg:w-[90%] p-[30px] m-5 rounded-2xl"
               >
                 {/* Image and text */}
-                <div className="flex items-end w-[60%] text-start space-x-2 mb-[5%]">
+                <div className="flex justify-center w-full lg:items-end  text-start space-x-3 mb-[5%]">
                   <div className="shrink-0">
                     <Image
                       src={`/services/${index + 1}.png`}
@@ -205,12 +203,12 @@ export default function Home() {
                       className="object-contain"
                     />
                   </div>
-                  <h4 className="text-text-black text-[1.5rem] lg:text-[20px] leading-tight">
+                  <h4 className="text-text-black text-[1.5rem] lg:text-[20px] leading-tight font-semibold w-[40%] text-center lg:text-start">
                     {service.heading}
                   </h4>
                 </div>
                 {/* description */}
-                <p className="text-[14px] font-poppins  text-[#777777] text-start">
+                <p className="text-[14px] font-poppins  text-[#777777] text-center lg:text-start">
                   {service.description}
                 </p>
               </div>
@@ -234,7 +232,7 @@ export default function Home() {
         </div>
       </div>
       {/* Stats */}
-      <div className=" ">
+      <div className="grid grid-cols-2 lg:grid-cols-4 py-20 bg-brown-background border-b-2 border-b-text-black px-[10%]">
         {[
           {
             stat: "1800+",
@@ -253,22 +251,22 @@ export default function Home() {
             text: "of Customers Return",
           },
         ].map((stat) => (
-          <div key={stat.text} className="flex flex-col items-center w-[10%] ">
+          <div key={stat.text} className="flex flex-col items-center  ">
             <h2 className="text-accent-primary text-[4rem] font-poppins">
               {stat.stat}
             </h2>
-            <p className=" text-accent-secondary text-base font-poppins">
+            <p className=" text-text-black text-[16px] font-poppins w-[50%] text-center">
               {stat.text}
             </p>
           </div>
         ))}
       </div>
       {/* Our Finishes */}
-      <div className="relative py-[5%] bg-brown-background px-[6%] overflow-y-hidden">
+      <div className="relative py-[10%] bg-brown-background px-[6%] overflow-y-hidden">
         {/* Content */}
         <div className="flex flex-col w-full lg:w-[55%] space-y-[3%]  py-10 lg:py-0">
           {/* Heading */}
-          <h1 className="text-[26px] lg:text-[26px] lg:text-[3rem] font-bold leading-[1.2] text-text-black">
+          <h1 className="text-[26px] lg:text-[3rem] font-bold leading-[1.2] text-text-black">
             Ghostwriting is a matter of trust - entrenching the branches to
             integrity and confidentiality
           </h1>
@@ -283,7 +281,7 @@ export default function Home() {
             influence the author's credibility.
           </p>
           {/* List */}
-          <ul className="grid grid-cols-2  ml-[5%] gap-y-[5%]  font-poppins font-medium text-text-black text-[1.2rem] py-10 lg:py-0">
+          <ul className="grid grid-cols-2  gap-y-[10%]  font-poppins font-medium text-text-black text-[1.2rem] py-10 mb-10 lg:py-0">
             {[
               "Increasing Competition",
               "Stress",

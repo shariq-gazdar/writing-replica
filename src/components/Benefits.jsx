@@ -3,7 +3,7 @@ import React from "react";
 
 function Benefits() {
   return (
-    <section className="lg:bg-[url('/backgrounds/benefits.png')] py-20 lg:bg-brown-background bg-cover bg-left bg-[#10223f]">
+    <section className="lg:bg-[url('/backgrounds/benefits.png')] py-20 lg:bg-brown-background bg-cover bg-[#10223f]">
       {/* Content */}
       <div className="lg:w-1/2 w-full flex flex-col lg:mx-[6.23%] px-4 space-y-5">
         {/* Heading */}

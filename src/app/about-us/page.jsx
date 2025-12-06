@@ -16,10 +16,9 @@ function page() {
         {/* Navbar */}
         <Navbar />
         {/* Hero Section */}
-        <section className="flex items-start justify-between px-[62.33px] py-12 w-screen flex-col lg:flex-row">
+        <section className="flex items-start justify-between lg:px-[62.33px] px-0 py-12 w-screen flex-col lg:flex-row">
           <HeroSectionWrapper
             leftClassName="gap-y-5"
-            rightClassName="justify-end"
             left={
               <>
                 {/* Left Side */}
@@ -31,7 +30,7 @@ function page() {
                 </RoundedContainer>
 
                 {/* Heading */}
-                <h1 className="lg:text-[40.8px] text-text-black font-bold font-cabin line leading-[43px] text-[28px]">
+                <h1 className="lg:text-[40.8px] text-text-black font-bold font-cabin line leading-[1.2] lg:leading-[43px] text-[28px] lg:text-start text-center pb-12">
                   {
                     "Communicate Your Values & Concepts With Our Ghostwriting Solutions"
                   }
@@ -56,23 +55,23 @@ function page() {
       {/* BrandLine */}
       <BrandLine />
       {/* Market Offer */}
-      <section className="flex justify-center py-[80px] bg-brown-background px-[5%] gird lg:grid-cols-2 gird-col-1">
+      <section className="flex flex-col lg:flex-row items-center justify-center py-[80px] bg-brown-background px-0 lg:px-[5%] gird lg:grid-cols-2 gird-col-1">
         {/* Left */}
         <div className="">
           <Image
             src={"/misc/market-offer.png"}
-            width={380}
+            width={400}
             height={415}
             alt="hero-banner"
             sizes="380px"
           />
         </div>
         {/* Right */}
-        <div className=" w-[48.3%] flex flex-col gap-y-[5%]">
+        <div className="w-full lg:w-[48.3%] flex flex-col gap-y-[5%] text-center lg:text-start px-4">
           <h2 className="font-cabin font-bold text-[26px] lg:text-[3rem] leading-[1.2] text-[#0B2240]">
-            Crafting Excellence Through Expertise and Passion
+            Crafting Excellence Through <br /> Expertise and Passion
           </h2>
-          <p className="text-[#010c2f] text-[1rem] font-normal font-poppins">
+          <p className="text-[#010c2f] text-[1.2rem] font-normal font-poppins">
             Phoenix Ghostwriting is a team of skilled ghostwriters, marketers,
             publishers, and other supporting professionals who have built the
             foundation of the brand. Our professionals hold diverse expertise
@@ -84,20 +83,23 @@ function page() {
             fiction, our journey has been a celebration of literature in all its
             forms.
           </p>
-          <NonShadowButton
-            paddingVertical={12}
-            paddingHorizontal={30}
-            backgroundColor="#f5441b"
-            mainColor="#fff"
-            hoverColor="#173f73"
-            borderColor="#142f53"
-            shadowColor="#1a3b66"
-            className={"text-[1rem]"}
-          >
-            Request a quote
-          </NonShadowButton>
+          <div className="centering lg:justify-start mt-5">
+            <NonShadowButton
+              paddingVertical={12}
+              paddingHorizontal={30}
+              backgroundColor="#f5441b"
+              mainColor="#fff"
+              hoverColor="#173f73"
+              borderColor="#142f53"
+              shadowColor="#1a3b66"
+              className={"text-[1rem]"}
+            >
+              Request a quote
+            </NonShadowButton>
+          </div>
         </div>
       </section>
+
       {/* The Best */}
       <section className="flex flex-col py-[80px] items-center px-[5%] text-center">
         <h2 className="font-cabin text-[26px] lg:text-[3rem] text-text-black font-bold">
@@ -187,6 +189,8 @@ function page() {
           ))}
         </div>
       </section>
+      {/* Call to Action  */}
+      <Cta />
       {/* Ghostwritters */}
       <section className="ghostwriter bg-white py-16 md:py-20">
         <div className="container mx-auto px-4 max-w-7xl">
@@ -195,8 +199,8 @@ function page() {
             {/* Left Column - Mission Section - Takes 7/12 columns on desktop */}
             <div className="lg:col-span-7 flex flex-col">
               {/* Mission Card */}
-              <div className="mission bg-gradient-to-br from-[#7f3437] to-[#99493d] text-center px-8 py-12 md:px-12 md:py-16 rounded-2xl lg:rounded-br-none lg:rounded-bl-none flex flex-col items-center">
-                <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <div className="mission bg-gradient-to-br from-[#7f3437] to-[#99493d] text-center px-8 py-12 md:px-12 md:py-16 rounded-t-2xl lg:rounded-2xl lg:rounded-br-none lg:rounded-bl-none flex flex-col items-center">
+                <h3 className="text-[26px] lg:text-[3rem] font-bold text-white mb-6">
                   Our Mission Statement
                 </h3>
                 <p className="text-white text-lg leading-[31px] font-normal font-poppins mb-8 w-[90%]">
@@ -230,18 +234,18 @@ function page() {
                 <img
                   src="https://www.phoenixghostwriting.com/assets/images/mission.jpg"
                   alt="Mission"
-                  className="w-full max-w-full rounded-lg lg:rounded-tl-none lg:rounded-tr-none"
+                  className="w-full max-w-full lg:rounded-lg lg:rounded-tl-none lg:rounded-tr-none rounded-b-2xl"
                 />
               </div>
 
               {/* Blog Sections - Appears at bottom of left container in mobile */}
-              <div className="mt-12 lg:hidden">
+              <div className="mt-12 lg:hidden px-4">
                 {/* First Blog */}
                 <div className="blog mb-12">
-                  <h2 className="text-3xl md:text-4xl font-bold text-[#0b2240] mb-6 leading-tight">
+                  <h2 className="text-[26px] lg:text-[3rem]  text-[#0b2240] mb-6 leading-tight font-bold">
                     Benefits of Consulting a Ghostwriting Agency
                   </h2>
-                  <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                  <p className="text-gray-700 text-lg leading-relaxed mb-6 font-poppins">
                     In the digital age, authors need high-quality content to
                     truly connect with their audience. While, readers seek
                     engaging and insightful material that echoes within them.
@@ -249,8 +253,8 @@ function page() {
                     the cliche themes and rather expect a fresh take on love
                     stories. Therefore, our approach incorporates each book with
                     creativity, bringing a unique spark to the narrative.
-                  </p>
-                  <p className="text-gray-700 text-lg leading-relaxed">
+                    <br />
+                    <br />
                     Understandably, this task can be overwhelming for many
                     authors who are focused on their primary operations. Thus,
                     investing in a ghostwriting company for top-tier content is
@@ -260,10 +264,10 @@ function page() {
 
                 {/* Second Blog */}
                 <div className="blog">
-                  <h2 className="text-3xl md:text-4xl font-bold text-[#0b2240] mb-6 leading-tight">
+                  <h2 className="text-[26px] lg:text-[3rem]font-bold text-[#0b2240] mb-6 leading-tight font-bold">
                     Understanding Ghostwriting <br /> in Our Words
                   </h2>
-                  <p className="text-gray-700 text-lg leading-relaxed mb-10">
+                  <p className="text-gray-700 text-[1.3rem] leading-[1.4] mb-10">
                     Ghostwriting isn't just about bringing in an agency to pen
                     your book; it's like gaining a partner in narrating your
                     story. Beyond hiring a writer, you're tapping into their
@@ -289,7 +293,7 @@ function page() {
                 <h2 className="text-3xl md:text-4xl font-bold text-[#0b2240] mb-6 leading-tight">
                   Benefits of Consulting a Ghostwriting Agency
                 </h2>
-                <p className="text-gray-700 text-lg leading-normal mb-6">
+                <p className="text-gray-700 text-[1.2rem] leading-normal mb-6 font-poppins">
                   In the digital age, authors need high-quality content to truly
                   connect with their audience. While, readers seek engaging and
                   insightful material that echoes within them. For instance, in
@@ -297,8 +301,8 @@ function page() {
                   and rather expect a fresh take on love stories. Therefore, our
                   approach incorporates each book with creativity, bringing a
                   unique spark to the narrative.
-                </p>
-                <p className="text-gray-700 text-lg leading-normal">
+                  <br />
+                  <br />
                   Understandably, this task can be overwhelming for many authors
                   who are focused on their primary operations. Thus, investing
                   in a ghostwriting company for top-tier content is a smart
@@ -311,7 +315,7 @@ function page() {
                 <h2 className="text-3xl md:text-4xl font-bold text-[#0b2240] mb-6 leading-tight">
                   Understanding Ghostwriting <br /> in Our Words
                 </h2>
-                <p className="text-gray-700 text-lg leading-normal mb-10">
+                <p className="text-gray-700 text-lg leading-normal mb-10 font-poppins">
                   Ghostwriting isn't just about bringing in an agency to pen
                   your book; it's like gaining a partner in narrating your
                   story. Beyond hiring a writer, you're tapping into their
@@ -331,8 +335,7 @@ function page() {
           </div>
         </div>
       </section>
-      {/* Call to Action  */}
-      <Cta />
+
       {/* Testimonials */}
       <Testimonial />
       {/* Footer */}

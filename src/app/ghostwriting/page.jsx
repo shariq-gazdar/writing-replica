@@ -19,10 +19,9 @@ function page() {
         {/* Navbar */}
         <Navbar />
         {/* Hero Section */}
-        <section className="flex items-start justify-between px-[62.33px] py-12 w-screen flex-col lg:flex-row">
+        <section className="flex items-start justify-between lg:px-[62.33px] px-0 py-12 w-screen flex-col lg:flex-row">
           <HeroSectionWrapper
             leftClassName="gap-y-5"
-            rightClassName="justify-end"
             left={
               <>
                 {/* Left Side */}
@@ -59,7 +58,7 @@ function page() {
       {/* BrandLine */}
       <BrandLine />
       {/* Market Offer -2 */}
-      <section className="flex justify-center py-[80px] bg-brown-background px-[5%]  gap-x-5">
+      <section className="flex flex-col lg:flex-row justify-center py-[80px] bg-brown-background px-[5%]  gap-x-5">
         {/* Left */}
         <div className="">
           <Image
@@ -71,12 +70,12 @@ function page() {
           />
         </div>
         {/* Right */}
-        <div className=" w-[48.3%] flex flex-col gap-y-[5%]  justify-center">
+        <div className=" w-full lg:w-[48.3%] flex flex-col gap-y-[5%]  justify-center my-10 lg:my-0 text-center lg:text-start">
           <h2 className="font-cabin font-bold text-[26px] lg:text-[3rem] leading-[1.2] text-[#0B2240]">
             Fiction vs. Nonfiction! Discover What We Offer In the Subsequent
             Genres?
           </h2>
-          <p className="text-[#010c2f] text-[1rem] font-normal font-poppins">
+          <p className="text-[#010c2f] text-[1.2rem] font-normal font-poppins my-5">
             With your fiction narrative, we develop the story of every character
             to create a coherent plot. From developing concepts and building
             plots to defining each character’s personality, we structure the
@@ -87,18 +86,20 @@ function page() {
             narrative, our skilled writers and editors are prepared to meet your
             needs across any genre!
           </p>
-          <NonShadowButton
-            paddingVertical={12}
-            paddingHorizontal={30}
-            backgroundColor="#f5441b"
-            mainColor="#fff"
-            hoverColor="#173f73"
-            borderColor="#142f53"
-            shadowColor="#1a3b66"
-            className={"text-[1rem]"}
-          >
-            Request a quote
-          </NonShadowButton>
+          <div className="centering">
+            <NonShadowButton
+              paddingVertical={12}
+              paddingHorizontal={30}
+              backgroundColor="#f5441b"
+              mainColor="#fff"
+              hoverColor="#173f73"
+              borderColor="#142f53"
+              shadowColor="#1a3b66"
+              className={"text-[1rem]"}
+            >
+              Request a quote
+            </NonShadowButton>
+          </div>
         </div>
       </section>
       {/* Ghost Cta */}
@@ -194,6 +195,7 @@ function page() {
           <Image
             src={"/backgrounds/top-level.png"}
             fill
+            alt="top-level"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>

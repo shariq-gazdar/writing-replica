@@ -3,6 +3,7 @@
 
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin 'tailwind-scrollbar';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -177,32 +178,78 @@
   }
 }
 /* Add to your global.css or CSS module */
-.heading-1 {
-  @apply text-[26px] lg:text-[3rem] font-bold leading-[1.2] text-text-black font-cabin;
+@layer utilities {
+  .heading-1 {
+    @apply text-[26px] lg:text-[3rem] font-bold leading-[1.2] text-text-black font-cabin;
+  }
+
+  .heading-2 {
+    @apply text-[2.5rem] font-bold text-text-black font-cabin;
+  }
+
+  .heading-3 {
+    @apply text-[1.5rem] font-bold text-text-black font-cabin;
+  }
+
+  .body-text {
+    @apply text-[1rem] font-normal font-poppins text-[#50545a];
+  }
+
+  .accent-text {
+    @apply text-accent-primary;
+  }
+
+  .white-text {
+    @apply text-white;
+  }
+  .best-card-bg {
+    @apply bg-[linear-gradient(180deg,rgba(255,255,255,1)0%,rgba(248,246,241,1)100%)];
+  }
+  .three-col {
+    @apply grid lg:grid-cols-3 grid-cols-1;
+  }
+
+  /* .heading {
+    @apply text:[26px] lg:text-[3rem];
+  } */
+}
+.heading {
+  font-size: 26px;
+}
+.paragraph {
+  font-size: 1rem;
+}
+.centering {
+  @apply flex justify-center items-center lg:justify-start;
+}
+@media (min-width: 1024px) {
+  .heading {
+    font-size: 3rem;
+  }
+  .paragraph {
+    font-size: 18px;
+  }
+}
+/* Thin Track + Thick Thumb Scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin; /* Firefox track width */
+  scrollbar-color: #000 transparent; /* Firefox colors */
 }
 
-.heading-2 {
-  @apply text-[2.5rem] font-bold text-text-black font-cabin;
+/* Chrome, Edge, Safari */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 2px; /* Track width */
 }
 
-.heading-3 {
-  @apply text-[1.5rem] font-bold text-text-black font-cabin;
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #b3b3b3;
 }
 
-.body-text {
-  @apply text-[1rem] font-normal font-poppins text-[#50545a];
-}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #4c596f;
+  border-radius: 10px;
 
-.accent-text {
-  @apply text-accent-primary;
-}
-
-.white-text {
-  @apply text-white;
-}
-.best-card-bg {
-  @apply bg-[linear-gradient(180deg,rgba(255,255,255,1)0%,rgba(248,246,241,1)100%)];
-}
-.three-col {
-  @apply grid lg:grid-cols-3 grid-cols-1;
+  /* Makes THUMB wider than track */
+  border: 3px solid transparent;
+  background-clip: padding-box;
 }

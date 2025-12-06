@@ -99,7 +99,7 @@ function Footer() {
       <footer>
         <div className="bg-[#313133] mx-auto px-4 relative -mt-[10%] pt-[9%] z-1  w-screen">
           {/* Image */}
-          <div className="absolute top-0 left-0 w-full h-[50%] lg:w-[40%]  lg:h-full -z-2 bg-transparent opacity-25 lg:opacity-100">
+          <div className="absolute top-0 -left-10 w-full h-[90%] lg:w-[40%] lg:h-[85%] -z-2 bg-transparent opacity-25 lg:opacity-100">
             <Image
               src={"/footer/footer-books.png"}
               fill
@@ -463,15 +463,11 @@ function Footer() {
             <p>
               {" "}
               Online Dispute Resolution (ODR) |
-              <a
-                href="
-              "
-                className="hover:text-accent-secondary"
-              >
+              <a href="#" className="hover:text-accent-secondary">
                 Privacy Policy
               </a>
               |
-              <a href="" className="hover:text-accent-secondary">
+              <a href="#" className="hover:text-accent-secondary">
                 Terms & Conditions
               </a>
               <br />
