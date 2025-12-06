@@ -127,7 +127,7 @@ function page() {
             </div>
 
             {/* Column 2 - Image (4/12 on desktop) */}
-            <div className="md:col-span-4 order-first md:order-none">
+            <div className="md:col-span-4 order-first md:order-0">
               <div className="img-bri flex justify-center">
                 <Image
                   src="/misc/brilliant-book.png"
